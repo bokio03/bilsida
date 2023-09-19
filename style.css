@@ -1,0 +1,39 @@
+@font-face {
+    font-family: barlow ;
+    src: url(./Fonts/BarlowCondensed-Light.ttf);
+}
+
+@font-face {
+    font-family: Bungee outline;
+    src: url(./Fonts/BungeeOutline-Regular.ttf);
+}
+
+@font-face {
+    font-family: Bungee shade;
+    src: url(./Fonts/BungeeShade-Regular.ttf);
+}
+
+body {
+    background-image: url(./Images/Street-racing-Getty-scaled1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 100vh;
+    width: 85%;
+    border-radius: 20px;
+    margin: 65px auto;
+}
+
+h1{
+    font-family: Bungee shade;
+    color: aqua;
+
+}
+
