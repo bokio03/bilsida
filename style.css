@@ -35,10 +35,7 @@ body {
     
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-}
+
 
 main {
     margin: 50px auto;
@@ -51,7 +48,7 @@ main {
 
 h1{
     font-family: Bungee Shade;
-    font-size: 65px;
+    font-size: 60px;
     color: #B2BABB;
     font-weight: bold;
     letter-spacing: 1px;
@@ -61,7 +58,9 @@ h1{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+/* -------------------------------------------------Fonts,All, Body , properties----------------------------------------------------*/ 
 
+/* -------------------------------------------------Navbar, properties----------------------------------------------------*/ 
 nav {
 
     display: flex;
@@ -111,7 +110,9 @@ nav a:nth-child(2) {
 nav a:nth-child(2):hover {
     cursor:pointer
 }
+/* -------------------------------------------------Navbar, properties----------------------------------------------------*/ 
 
+/* -------------------------------------------------Section, properties----------------------------------------------------*/ 
 section {
     padding: 10px;
     border: solid 2px rgba(245, 245, 245, 0.758);
@@ -128,6 +129,7 @@ section h2  {
     font-family: Bungee outline;
     color: white;
     line-height: 1;
+    font-size: 32px;
 }
 
 section h3 {
@@ -135,7 +137,7 @@ section h3 {
     background: -webkit-linear-gradient(#965704b0, rgba(204, 159, 36, 0.762) );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-     
+     font-size: 20px;
     margin-top: 10px;
 }
 
@@ -153,8 +155,10 @@ section p {
     margin-top: 40px;
     padding-right: 3px;  
 }
+/* -------------------------------------------------Section, properties----------------------------------------------------*/ 
 
 
+/* -------------------------------------------------List, properties----------------------------------------------------*/ 
 summary {
     display: flex;
     flex-direction: column;
@@ -170,17 +174,12 @@ main>div {
     flex-direction: column;
     gap: 40px;
 }
-
-
-div li {color: white;}
-
-
 aside {
    min-width: 28.5vw;
 
 }
 
-
+div li {color: white;}
 
 ol,
 ul {
@@ -214,9 +213,41 @@ ul {
 }
 ol {
     padding-left: 13px;
+
+
+}
+/* -------------------------------------------------List, properties----------------------------------------------------*/ 
+
+/* -------------------------------------------------Images Desktop, effect----------------------------------------------------*/ 
+#images {
+    position: relative;
+    width: 100%;
+
 }
 
+#images img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    
+}
 
+#images img:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 0.7s ease;
+}
+
+#images img:nth-child(1):hover {
+    opacity: 1;
+
+}
+/* -------------------------------------------------Images Desktop, effect----------------------------------------------------*/ 
+
+
+
+/* -------------------------------------------------Boxes Desktop----------------------------------------------------*/ 
 .boxes {
     display: flex;
     gap: 10px;
@@ -242,38 +273,6 @@ margin: 0;
 display: contents;
 line-height: 0%;
 }
-
-
-
-
-#images {
-    position: relative;
-    width: 100%;
-
-}
-
-#images img {
-    width: 100%;
-    border-radius: 10px 10px 0 0;
-    
-}
-
-#images img:nth-child(1) {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    transition: all 0.7s ease;
-}
-
-#images img:nth-child(1):hover {
-    opacity: 1;
-
-}
-
-
-    
-
     section:nth-of-type(1) .boxes div {
         background-color: rgba(167, 135, 48, 0.647);
 
@@ -354,32 +353,49 @@ line-height: 0%;
         border-radius: 25px 25px 0 25px;
  
    }
+    /* -------------------------------------------------Boxes Desktop----------------------------------------------------*/ 
 
 
-   @media screen and (min-width: 500px) and (max-width: 800px){
-    * {
-        filter: blur(4px);
-    
+  /* -------------------------------------------------Media querys Desktop----------------------------------------------------*/ 
+@media screen and (min-width: 900px) and (max-width: 1200px) {
+    h1 {
+        font-size: clamp(40px, 5vw, 60px); 
     }
-   }
 
-   @media screen and (min-width: 900px) and (max-width: 1200px) {
+    section h2 {
+        font-size: clamp(20px, 3vw, 32px); 
+    }
+
+    section h3 {
+        font-size: clamp(18px, 2vw, 20px); 
+    }
+
     p, li, h4 {
         font-size: clamp(0.7rem, 1.5vw, 1.0rem);
-        /* Adjust the values as needed */
+        
     }
 
 }
-
 
 @media screen and (min-width: 800px) and (max-width: 900px) {
-    p, li, h4 {
-        font-size: 0.85rem;
-        /* Adjust the values as needed */
+    h1 {
+        font-size: 45px; 
     }
 
+    section h2 {
+        font-size: 27px; 
+    }
 
+    section h3 {
+        font-size: 18px; 
+    }
+
+    p, li, h4 {
+        font-size: 0.85rem;
+        
+    }
 }
+
 @media screen and (min-width: 1200px)  {
     aside {
         min-width: 343px;
@@ -387,8 +403,12 @@ line-height: 0%;
 
 }
 
+ /* -------------------------------------------------Media querys Desktop----------------------------------------------------*/ 
 
 
+
+
+ /* -------------------------------------------------Media querys Mobile----------------------------------------------------*/ 
 @media screen and (max-width: 500px) {
     body {
         background-image: url("../bilsida/Images/Street-racing-Getty-scaled1.jpg");
@@ -397,8 +417,6 @@ line-height: 0%;
         background-repeat: no-repeat;
         background-position: center;
     }
-
-
     
     main {
         border-radius: 0;
@@ -424,9 +442,7 @@ line-height: 0%;
         border-radius: 10px 0 0 10px;
     }
 
-   
-
-    ol {
+   ol {
         padding-left: 17px;
     }
 
@@ -435,14 +451,10 @@ line-height: 0%;
     }
 
     h2 {
+        
         -webkit-text-stroke: #F8F0E3 1px;
     }
 
-  
-/* 
-    p {
-        font-size: 0.5rem;
-    } */
 
     li {
         font-size: 1.1rem;
@@ -484,9 +496,6 @@ line-height: 0%;
         flex-basis: 30%;
     }
 
-
-
-
     section:nth-of-type(2) .boxes :nth-child(1) {
         flex-basis: 50%;
     }
@@ -500,7 +509,15 @@ line-height: 0%;
     }
 
     section:nth-of-type(2) .boxes :nth-child(4) {
-        flex-basis: 34%;
+        flex-basis: 30%;
     }
 }
-   
+    /* -------------------------------------------------Media querys Mobile----------------------------------------------------*/ 
+
+    /* -------------------------------------------------Media querys Tablet----------------------------------------------------*/ 
+    @media screen and (min-width: 500px) and (max-width: 800px){
+        * {
+            filter: blur(4px);
+        }
+       }
+    /* -------------------------------------------------Media querys Tablet----------------------------------------------------*/ 
